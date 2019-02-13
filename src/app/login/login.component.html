@@ -1,5 +1,5 @@
 <h2 class="text-center">Login</h2>
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="col-md-6 offset-md-3">
+<form novalidate [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="col-md-6 offset-md-3">
   <div class="form-group row">
     <label class="col">
       Email
@@ -20,7 +20,7 @@
     Invalid password!
   </div>
   <div class="form-group">
-    <button class="btn btn-info" type="submit">Submit</button>
+    <button class="btn btn-info" [disabled]="loginForm.invalid" type="submit">Submit</button>
   </div>
 </form>
 
